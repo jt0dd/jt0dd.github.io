@@ -1,8 +1,8 @@
 new Element("div", {
         ready: self => {
-          self.setHTML(marked.parse(`
+          self.setText(marked.parse(`
           # Security Engineering with Chess: A Cybersecurity Learning Saga
-          
+
           ### Bottom Line Up Front (BLUF)
           *Communication is half of the battle.*
 
