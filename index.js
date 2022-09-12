@@ -1,4 +1,5 @@
-(new Element('div', {})).setHTML(marked.parse(`
+const markdown1 = new Element('div', {}).appendTo(document.body)
+markdown1.setHTML(marked.parse(`
 # Security Engineering with Chess: A Cybersecurity Learning Saga
 
 ### Bottom Line Up Front (BLUF)
@@ -66,7 +67,7 @@ Some capabilities, especially working with big data (which many networks are) ar
 And if you're smart, you'll end up being compensated very well for that skillset. You might even build your own product, your own company even. *Regardless of your role, however technical or non-technical it might be, if you use a computer through some part of the process (and you probably do), you can become a multi-discipline security professional by just applying code to integrate, reduce error, optimize, and/or scale.*
 
 
-`)).appendTo(document.body)
+`))
 
 
 /**
