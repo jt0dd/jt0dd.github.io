@@ -1,6 +1,6 @@
 new Element("div", {
         ready: self => {
-          self.setText(marked.parse(`
+          self.setHTML(marked.parse(`
           # Security Engineering with Chess: A Cybersecurity Learning Saga
 
           ### Bottom Line Up Front (BLUF)
