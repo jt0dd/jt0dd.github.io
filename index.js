@@ -1,74 +1,77 @@
-const markdown1 = new Element('div', {})
-markdown1.appendTo(document.body)
-markdown1.setHTML(marked.parse(`
-# Security Engineering with Chess: A Cybersecurity Learning Saga
+new Element("div", {
+        ready: self => {
+          self.setHTML(marked.parse(`
+          # Security Engineering with Chess: A Cybersecurity Learning Saga
+          
+          ### Bottom Line Up Front (BLUF)
+          *Communication is half of the battle.*
 
-### Bottom Line Up Front (BLUF)
-*Communication is half of the battle.*
+          The first lesson of cybersecurity comes to us courtesy of the U.S. Army; a trick I learned in my time enlisted working at the National Security Agency: Begin every writing with a BLUF.
 
-The first lesson of cybersecurity comes to us courtesy of the U.S. Army; a trick I learned in my time enlisted working at the National Security Agency: Begin every writing with a BLUF.
+          **Task One:** In cybersecurity and virtually every other complex profession, your absolute number one task is to identify value.
 
-**Task One:** In cybersecurity and virtually every other complex profession, your absolute number one task is to identify value.
+          **Task Two:** Communicate that value effectively and quickly enough for the people listening to decide to keep listening.
 
-**Task Two:** Communicate that value effectively and quickly enough for the people listening to decide to keep listening.
+          In this saga, I've already introduced the most important skill of the professional world, and the rest of it will be spent identifying, exploring, and learning to communicate value in one of the most valuable roles in the cybersecurity field... and we'll do it all with Chess. And there was my BLUF!
 
-In this saga, I've already introduced the most important skill of the professional world, and the rest of it will be spent identifying, exploring, and learning to communicate value in one of the most valuable roles in the cybersecurity field... and we'll do it all with Chess. And there was my BLUF!
+          **Task Three:** Execution... at scale. (...is *the other* half of the battle)
 
-**Task Three:** Execution... at scale. (...is *the other* half of the battle)
+          ### Security Engineering
+          *The highest value adding role in the cybersecurity field.*
 
-### Security Engineering
-*The highest value adding role in the cybersecurity field.*
+          If you're still reading, the BLUF worked. Time for a hook: By the end of this saga, you're going to reimagine, thanks to Chess, the possibilities of engineering powerful cybersecurity solutions at scale. But don't just take it from me, every chapter I promise you a quote from someone smarter than I - for a total of 74 legendary lessons from great leaders and reknowned heroes, your Gandalfs and Dumbledores of the cyber world, as any good saga must have.
 
-If you're still reading, the BLUF worked. Time for a hook: By the end of this saga, you're going to reimagine, thanks to Chess, the possibilities of engineering powerful cybersecurity solutions at scale. But don't just take it from me, every chapter I promise you a quote from someone smarter than I - for a total of 74 legendary lessons from great leaders and reknowned heroes, your Gandalfs and Dumbledores of the cyber world, as any good saga must have.
+          If you managage risk on a network in some way: identify vulnerability, apply controls, detect a threat, or perhaps create one, you're adding value to your cyber mission, once. If you engineer a tool for it, you're adding value to every cyber mission, many times over. Your time and effort **return on investment** (RoI) is *limitless*.
 
-If you managage risk on a network in some way: identify vulnerability, apply controls, detect a threat, or perhaps create one, you're adding value to your cyber mission, once. If you engineer a tool for it, you're adding value to every cyber mission, many times over. Your time and effort **return on investment** (RoI) is *limitless*.
+          > Quote about adding and communicating value
 
-> Quote about adding and communicating value
+          Remember: Most leaders think in terms of value and cost. Always bring real value to the table, and communicate concisely why the RoI on cost to realize that value is higher than the alternatives. We're not in the business of security for security's sake. We're in the business of profit. *By adding limitless value (and effectively communicating it), a Security Engineer thrives in the business of profit.*
 
-Remember: Most leaders think in terms of value and cost. Always bring real value to the table, and communicate concisely why the RoI on cost to realize that value is higher than the alternatives. We're not in the business of security for security's sake. We're in the business of profit. *By adding limitless value (and effectively communicating it), a Security Engineer thrives in the business of profit.*
+          ### You, Too, Can Be a Security Engineer
+          *Security engineering is the most powerful secondary discipline you can pick up in any cyber role.*
 
-### You, Too, Can Be a Security Engineer
-*Security engineering is the most powerful secondary discipline you can pick up in any cyber role.*
+          No matter your role...
 
-No matter your role...
+          - Identity & Access Management Analyst
+          - Security Operations Centre Analyst
+          - Chief Information Security Officer
+          - Governance Risk & Control
+          - Incident Response Analyst
+          - Security Education & Awareness Officer
+          - Vulnerability Management
+          - Attack Surface Reduction
+          - Security Architect
+          - Forensics Analyst
+          - Threat Hunter
+          - Cyber Auditor
 
-- Identity & Access Management Analyst
-- Security Operations Centre Analyst
-- Chief Information Security Officer
-- Governance Risk & Control
-- Incident Response Analyst
-- Security Education & Awareness Officer
-- Vulnerability Management
-- Attack Surface Reduction
-- Security Architect
-- Forensics Analyst
-- Threat Hunter
-- Cyber Auditor
+          ...you probably do some work in your daily workflow which could be automated and could save the company time (money) across one or more departments of labor. If you hate the idea of writing code, read no further. But if you already code or are open to learn, this saga is for you.
 
-...you probably do some work in your daily workflow which could be automated and could save the company time (money) across one or more departments of labor. If you hate the idea of writing code, read no further. But if you already code or are open to learn, this saga is for you.
+          > Quote about automation
 
-> Quote about automation
+          #### Integration
 
-#### Integration
+          Once you develop this skill (in addition to whatever your existing skill-set is), you will be a multi-discipline professional. This gives you a unique power to see value opportunities through integration of the tools, workflows, and systems of your department with those of another. Coding lets you speak the language of tools, and once you speak that language, infinite possibilities arise to integrate them with other tools in highly valuable ways.
 
-Once you develop this skill (in addition to whatever your existing skill-set is), you will be a multi-discipline professional. This gives you a unique power to see value opportunities through integration of the tools, workflows, and systems of your department with those of another. Coding lets you speak the language of tools, and once you speak that language, infinite possibilities arise to integrate them with other tools in highly valuable ways.
+          #### Error Reduction
 
-#### Error Reduction
+          As we all know, we humans are prone to mistakes, so as a bonus: The automation of that task probably lowers the rate of error in the process, and that can often save money.
 
-As we all know, we humans are prone to mistakes, so as a bonus: The automation of that task probably lowers the rate of error in the process, and that can often save money.
+          #### Optimization
 
-#### Optimization
+          That opportunity for optimization is called a gap. If you can recognize that capability gap, that opportunity to add value, communicate a worthwhile return on the investment to realize that value (cost of execution), and execute effectively, you'll generate value for your company, your boss, your customers.
 
-That opportunity for optimization is called a gap. If you can recognize that capability gap, that opportunity to add value, communicate a worthwhile return on the investment to realize that value (cost of execution), and execute effectively, you'll generate value for your company, your boss, your customers.
+          #### Operation At Scale
 
-#### Operation At Scale
+          Some capabilities, especially working with big data (which many networks are) are not feasible *without* automation. You can fill gaps people didn't even realize existed. And have fun doing it. Creativity can be endless fun, and very rewarding.
 
-Some capabilities, especially working with big data (which many networks are) are not feasible *without* automation. You can fill gaps people didn't even realize existed. And have fun doing it. Creativity can be endless fun, and very rewarding.
-
-And if you're smart, you'll end up being compensated very well for that skillset. You might even build your own product, your own company even. *Regardless of your role, however technical or non-technical it might be, if you use a computer through some part of the process (and you probably do), you can become a multi-discipline security professional by just applying code to integrate, reduce error, optimize, and/or scale.*
+          And if you're smart, you'll end up being compensated very well for that skillset. You might even build your own product, your own company even. *Regardless of your role, however technical or non-technical it might be, if you use a computer through some part of the process (and you probably do), you can become a multi-discipline security professional by just applying code to integrate, reduce error, optimize, and/or scale.*
 
 
-`))
+          `))
+        }
+      }).appendTo(document.body);
+
 
 
 /**
