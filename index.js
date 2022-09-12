@@ -1,4 +1,4 @@
-(new Element('div', {})).html(marked.parse(`
+(new Element('div', {})).setHTML(marked.parse(`
 # Security Engineering with Chess: A Cybersecurity Learning Saga
 
 ### Bottom Line Up Front (BLUF)
