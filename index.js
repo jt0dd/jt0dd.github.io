@@ -1,4 +1,5 @@
-const markdown1 = (new Element('div', {})).appendTo(document.body)
+const markdown1 = new Element('div', {})
+markdown1.appendTo(document.body)
 markdown1.setHTML(marked.parse(`
 # Security Engineering with Chess: A Cybersecurity Learning Saga
 
