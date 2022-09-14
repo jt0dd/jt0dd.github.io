@@ -1,78 +1,254 @@
-new Element("div", {
-        ready: self => {
-          self.setHTML(marked.parse(`
-          # Security Engineering with Chess: A Cybersecurity Learning Saga
+const blogBody = new Element('div', {
+  ready: self => {
+    self.append(new Element('div', {
+      styles: {
+        'display': 'flex',
+        'flex-direction': 'row'
+      },
+      ready: self => {
+        self.append(new Element("div", {
+          styles: {
+            'display': 'flex',
+            'padding': '20px',
+            'flex-direction': 'row',
+            'justify-content': 'center',
+            'align-items': 'center'
+          },
+          ready: self => {
+            self.append(new Element("i", {
+              classes: ["fa-solid", 'fa-chess-knight'],
+              styles: {
+                "font-size": "55px",
+                "color": "white"
+              }
+            }))
+          }
+        }))
+        self.append(new Element("h1", {
+          text: 'Security Engineering with Chess: A Cybersecurity Learning Saga'
+        }))
+      }
+    }))
 
-          ### Bottom Line Up Front (BLUF)
-          *Communication is half of the battle.*
-
-          The first lesson of cybersecurity comes to us courtesy of the U.S. Army; a trick I learned in my time enlisted working at the National Security Agency: Begin every writing with a BLUF.
-
-          **Task One:** In cybersecurity and virtually every other complex profession, your absolute number one task is to identify value.
-
-          **Task Two:** Communicate that value effectively and quickly enough for the people listening to decide to keep listening.
-
-          In this saga, I've already introduced the most important skill of the professional world, and the rest of it will be spent identifying, exploring, and learning to communicate value in one of the most valuable roles in the cybersecurity field... and we'll do it all with Chess. And there was my BLUF!
-
-          **Task Three:** Execution... at scale. (...is *the other* half of the battle)
-
-          ### Security Engineering
-          *The highest value adding role in the cybersecurity field.*
-
-          If you're still reading, the BLUF worked. Time for a hook: By the end of this saga, you're going to reimagine, thanks to Chess, the possibilities of engineering powerful cybersecurity solutions at scale. But don't just take it from me, every chapter I promise you a quote from someone smarter than I - for a total of 74 legendary lessons from great leaders and reknowned heroes, your Gandalfs and Dumbledores of the cyber world, as any good saga must have.
-
-          If you managage risk on a network in some way: identify vulnerability, apply controls, detect a threat, or perhaps create one, you're adding value to your cyber mission, once. If you engineer a tool for it, you're adding value to every cyber mission, many times over. Your time and effort **return on investment** (RoI) is *limitless*.
-
-          > Quote about adding and communicating value
-
-          Remember: Most leaders think in terms of value and cost. Always bring real value to the table, and communicate concisely why the RoI on cost to realize that value is higher than the alternatives. We're not in the business of security for security's sake. We're in the business of profit. *By adding limitless value (and effectively communicating it), a Security Engineer thrives in the business of profit.*
-
-          ### You, Too, Can Be a Security Engineer
-          *Security engineering is the most powerful secondary discipline you can pick up in any cyber role.*
-
-          No matter your role...
-
-          - Identity & Access Management Analyst
-          - Security Operations Centre Analyst
-          - Chief Information Security Officer
-          - Governance Risk & Control
-          - Incident Response Analyst
-          - Security Education & Awareness Officer
-          - Vulnerability Management
-          - Attack Surface Reduction
-          - Security Architect
-          - Forensics Analyst
-          - Threat Hunter
-          - Cyber Auditor
-
-          ...you probably do some work in your daily workflow which could be automated and could save the company time (money) across one or more departments of labor. If you hate the idea of writing code, read no further. But if you already code or are open to learn, this saga is for you.
-
-          > Quote about automation
-
-          #### Integration
-
-          Once you develop this skill (in addition to whatever your existing skill-set is), you will be a multi-discipline professional. This gives you a unique power to see value opportunities through integration of the tools, workflows, and systems of your department with those of another. Coding lets you speak the language of tools, and once you speak that language, infinite possibilities arise to integrate them with other tools in highly valuable ways.
-
-          #### Error Reduction
-
-          As we all know, we humans are prone to mistakes, so as a bonus: The automation of that task probably lowers the rate of error in the process, and that can often save money.
-
-          #### Optimization
-
-          That opportunity for optimization is called a gap. If you can recognize that capability gap, that opportunity to add value, communicate a worthwhile return on the investment to realize that value (cost of execution), and execute effectively, you'll generate value for your company, your boss, your customers.
-
-          #### Operation At Scale
-
-          Some capabilities, especially working with big data (which many networks are) are not feasible *without* automation. You can fill gaps people didn't even realize existed. And have fun doing it. Creativity can be endless fun, and very rewarding.
-
-          And if you're smart, you'll end up being compensated very well for that skillset. You might even build your own product, your own company even. *Regardless of your role, however technical or non-technical it might be, if you use a computer through some part of the process (and you probably do), you can become a multi-discipline security professional by just applying code to integrate, reduce error, optimize, and/or scale.*
-
-
-          `))
+    self.append(new Element("div", {
+      styles: {
+        'display': 'flex',
+        'flex-direction': 'column',
+        'jusify-content': 'center',
+        'align-items': 'center',
+        'background-color': '#2a2b36'
+      },
+      ready: async self => {
+        const board = new Board();
+        self.append(board.element)
+        board.element.style('margin', '0px 15px 0px 15px')
+        await makeRandomTurnCycle(board, 5)
+        console.log('board.pieces', board.pieces)
+        const allPieces = board.pieces.white.concat(board.pieces.black)
+        let kingFound = false
+        for (const piece of allPieces) {
+          console.log(piece.name)
+          if (piece.name == 'King') kingFound = piece
         }
-      }).appendTo(document.body);
 
+        // In this visual stunt, we need a king and a knight. The knight will
+        // be made to break the rules (later demoed as an exploitation) and illegally
+        // move to kill the king.
 
+        if (kingFound) {
+          let knightFound = false
+          for (const piece of board.pieces[getOppositeColor(kingFound.color)]) {
+            if (piece.name == 'Knight') knightFound = piece
+          }
+          if (knightFound) {
+
+            // The stunt can proceed.
+
+            const king = kingFound
+            const knight = knightFound
+            knight.element.style('transition-timing-function', 'linear')
+
+            knight.element.children[0].style('transition', 'top 0.2s, left 0.2s, color 2s, transform 2s')
+            knight.element.children[0].style('color', '#891717')
+            knight.element.children[0].style('transform', 'rotate(360deg)')
+
+            setTimeout(async () => {
+              console.log('king', king)
+              console.log('knight', knight)
+
+              const yMove = knight.y - king.y
+              const xMove = knight.x - king.x
+              console.log('yMove', yMove)
+              console.log('xMove', xMove)
+
+              let moveQueue = []
+              let directionY
+              if (knight.y > king.y) {
+                directionY = -1
+              } else {
+                directionY = 1
+              }
+              for (let y = knight.y; y >= king.y; y += directionY) {
+                console.log('knight.move', knight.x, y)
+                let collision = false
+                for (const piece of allPieces) {
+                  if (piece.x == knight.x && piece.y == y && piece != knight) collision = piece
+                }
+                moveQueue.push({piece: knight, x: knight.x, y: y, collisionEnemy: collision})
+              }
+              let directionX
+              if (knight.x > king.x) {
+                directionX = -1
+              } else {
+                directionX = 1
+              }
+              await iterateMoveQueue(moveQueue, 200)
+              moveQueue = []
+              for (let x = knight.x; x >= king.x; x += directionX) {
+                console.log('knight.move', knight.y, x)
+                let collision = false
+                for (const piece of allPieces) {
+                  if (piece.x == x && piece.y == knight.y && piece != knight) collision = piece
+                }
+                moveQueue.push({piece: knight, x: x, y: knight.y, collisionEnemy: collision})
+              }
+              await iterateMoveQueue(moveQueue, 200)
+            }, 2000)
+          }
+        }
+      }
+    }))
+
+    self.append((new Element("div", {
+      styles: {
+        'padding': '0px 15px'
+      },
+      ready: self => {
+        self.setHTML(marked.parse(`
+## Chapter 1 | Bottom Line Up Front (BLUF)
+*Communication is half of the battle.*
+
+The first lesson of cybersecurity comes to us courtesy of the U.S. Army; a trick I learned in my time enlisted working at the National Security Agency: Begin every professional writing with a BLUF.
+
+**Task One:** In cybersecurity and virtually every other complex profession, your absolute number one task is to identify value.
+
+**Task Two:** Communicate that value effectively and quickly enough for the people listening to decide to keep listening.
+
+In this saga, I've already introduced the most important skill of the professional world, and the rest of it will be spent identifying, exploring, and learning to communicate value in one of the most valuable roles in the cybersecurity field... and we'll do it all with Chess. And there was my BLUF!
+
+**Task Three:** Execution... at scale. (...is *the other* half of the battle)
+
+## Chapter 2 | Engineering *Outcome*, *Outcome*, *Outcome*
+
+The reason we first pause the engineering aspect of this "Security Engineering" Saga to highlight these "soft-skill" aspects of the profession is simple: All the technical expertise and skill in the world will lead you nowhere if you don't understand what you're really supposed to be *doing* with it. ***Outcome.*** If your only focus in your job is cybersecurity, *you will fail at cybersecurity.* From now on, you are a **multi-discipline** professional. Your new discipline? Enabling operational outcome. That's your job. Before analyzing network protocols, forensic endpoint analysis, reverse engineering, DevSecOps, you need to understand that the very core of your purpose, from the perspective of your employer is either:
+
+- Meet some perceived regulatory compliance requirements (security theater),
+- (or) Enable the business to continue to operate its organizational objectives in order of priority under limited resource constraints.
+
+Cybersecurity is simply the medium through which you're expected to fulfill that purpose. Once you understand this, the next thing you must realize is that you need two critical tools in your belt in addition to technical expertise:
+
+- The ability to understand your organization's big picture objectives and prioritization of those objectives.
+- The ability to effectively communicate the best strategy to meet the organization's risk appetite, the resources required to realistically achieve that mitigation strategy.
+
+If you approach cyber security without those tools, you will instead:
+
+- Attempt to execute "Security for Security's Sake",
+- Fail to align with the goals of the organization.
+
+And then from the misalignment of objectives between yourself and the organization, you'll become frustrated, stressed, and disenfranchised from the passion you once held for the profession. Even if your true role in an organization is Security Theater, by simply seeing the bigger picture and having this understanding will allow you to expect and shrug off the lack of necessary resources, authority to affect change, and organizational support rather than lament. Take the pay, polish your resume, learn, publish write-ups like this one to expand your reach and credibility, and relax. You'll soon find a real security job where you can express your passion for the profession.
+
+## Chapter 3 | The Critical Role of Communication in Cybersecurity (And Everything Else)
+*Accessibility: The. Most. Important. Thing.*
+
+The content of this piece (and I suspect all communication for the rest of my lifetime) will be driven by the most valuable piece of operational wisdom I have ever had the pleasure of reading.
+
+> "I'm not really sure how Bezos came to this realization -- the insight that he can't build one product and have it be right for everyone. But it doesn't matter, because he gets it. There's actually a formal name for this phenomenon. It's called Accessibility, and it's the most important thing in the computing world.
+
+> The. Most. Important. Thing.
+
+> If you're sorta thinking, 'huh? You mean like, blind and deaf people Accessibility?' then you're not alone, because I've come to understand that there are lots and LOTS of people just like you: people for whom this idea does not have the right Accessibility, so it hasn't been able to get through to you yet. It's not your fault for not understanding, any more than it would be your fault for being blind or deaf or motion-restricted or living with any other disability. When software -- or idea-ware for that matter -- fails to be accessible to anyone for any reason, it is the fault of the software or of the messaging of the idea. It is an Accessibility failure. [...] But I'll argue that Accessibility is actually more important than Security because dialing Accessibility to zero means you have no product at all, whereas dialing Security to zero can still get you a reasonably successful product such as the Playstation Network." - [Steve Yegge](https://www.linkedin.com/in/steveyegge/), Senior Software Engineer & Manager, F**A**AN**G**, [Stevey's Google Platforms Rant](https://gist.github.com/chitchcock/1281611)
+
+For those who need it, we begin this saga with a substantial overview priceless mile-high lessons on how to approach security engineering (and more broadly, cybersecurity as a profession). If you prefer, feel free to skip straight ahead to the experiments and hand-on coding sections, depending on your interests:
+
+- **Chapter 10 | Memory Forensics:** Forensic analysis (first manual, then automated) of a vulnerable peer-to-peer web app (Chess).
+- **Chapter 11 | Remote Code Execution:** Engineering an attack to exploit vulnerable code and achieve Remote Code Execution (RCE).
+- **Chapter 12 | Detection:** Building a run-time memory forensics baseline of the JavaScript runtime within Google Chrome.
+
+What I just did was take the lesson about operational accessibility and apply it, as I propose we all should, to communication (and everything else we do that involves other people). Even though a writer must establish a target audience, each member of that audience will still consume the writing from a remarkably different perspective. A different set of experiences, strengths, goals, and objectives. Introducing and facilitating choices enabling consumers of your content to quickly access sections that provide them the greatest value (and skip the rest) is an awesome way to apply that lesson to communication.
+
+Popular wisdom: Use a hook in your communication content to highlight the most interesting feature (value).
+
+This Saga culminates, after journeying through the many fundamental challenges of security (through the initially simple abstraction of a Chess game) in two practical outcomes far more remarkable than a shallow one-off exercise:
+
+- Checkmate: A real, operational C2 framework operating within the memory run-time of Google Chrome, featuring some of the most effective detection counter-measures known to modern offensive cyber operations.
+- Rematch: A real, comprehensive Detection-as-Code solution to **S**ecure, **O**rachestrate, **A**utomate, and **R**espond (SOAR) effectively against this state-of-the-art attack.
+
+## Chapter 4 | Engineering Limitless Value
+*The highest value adding role in the cybersecurity field.*
+
+If you're still reading, the BLUF worked. Time for a hook: By the end of this saga, you're going to reimagine, thanks to Chess, the possibilities of engineering powerful cybersecurity solutions at scale. But don't just take it from me, every chapter I promise you a quote from someone smarter than I - for a total of 74 legendary bits of wisdom from great leaders and reknowned heroes, your Gandalfs and Dumbledores of the cyber world, as any good saga must have.
+
+If you managage risk on a network in some way: identify vulnerability, apply controls, detect a threat, or perhaps create one, you're adding value to your cyber mission, once. If you engineer a tool for it, you're adding value to every cyber mission, many times over. Your time and effort **return on investment** (RoI) has *limitless* potential.
+
+> Quote about adding and communicating value
+
+Remember: Most leaders think in terms of value and cost. Always bring real value to the table, and communicate concisely why the return on investment to realize that value is both higher than the alternatives and worthwhile. We're not in the business of security for security's sake. We're in the business of profit. *By adding limitless value potential (and effectively communicating it), a Security Engineer thrives in the business of profit.*
+
+But remember: Limitless value potential never becomes tangible without execution. Don't spend all your time dreaming, lest you forget to transform your ideas into working code and tangible outcomes.
+
+## Chapter 5 | You, Too, Can Be a Security Engineer
+*Security engineering is the most powerful secondary discipline you can pick up in any cyber role.*
+
+No matter your role...
+
+- Identity & Access Management Analyst
+- Security Operations Centre Analyst
+- Chief Information Security Officer
+- Governance Risk & Control
+- Incident Response Analyst
+- Security Education & Awareness Officer
+- Vulnerability Management
+- Attack Surface Reduction
+- Security Architect
+- Forensics Analyst
+- Threat Hunter
+- Cyber Auditor
+
+...you probably do or observe some task in your department's daily workflow which could be automated and could save the company time (money) across one or more departments of labor. If you hate the idea of writing code, read no further. But if you already code or are open to learn, this saga is for you.
+
+> Quote about automation
+
+#### Integration
+
+Once you develop this skill (in addition to whatever your existing skill-set is), you will be a multi-discipline professional. This gives you a unique power to see value opportunities through integration of the tools, workflows, and systems of your department with those of another. Coding lets you speak the language of tools, and once you speak that language, infinite possibilities arise to integrate them with other tools in highly valuable ways.
+
+#### Error Reduction
+
+As we all know, we humans are prone to mistakes, so as a bonus: The automation of that task probably lowers the rate of error in the process, and that can often save money.
+
+#### Optimization
+
+That opportunity for optimization is called a gap. If you can recognize that capability gap, that opportunity to add value, communicate a worthwhile return on the investment to realize that value (cost of execution), and execute effectively, you'll generate value for your company, your boss, your customers.
+
+#### Operation At Scale
+
+Some capabilities, especially working with big data (which many networks are) are not feasible *without* automation. You can fill gaps people didn't even realize existed. And have fun doing it. Creativity can be endless fun, and very rewarding.
+
+And if you're smart, you'll end up being compensated very well for that skillset. You might even build your own product, your own company even. *Regardless of your role, however technical or non-technical it might be, if you use a computer through some part of the process (and you probably do), you can become a multi-discipline security professional by just applying code to integrate, reduce error, optimize, and/or scale.*
+
+## Chapter 6 | What This Saga Is Not
+*This is not a cybersecurity & software engineering "noob-to-pro" tutorial.*
+
+- Coding (in Python) will be demonstrated, but not elaborated on comprehensively.
+- Basic cybersecurity concepts will be referenced, but not explained. Advanced concepts will be more thoroughly explained.
+
+In other words, the reader is expected to know the basics of both subjects. Someone who has passed Sec+ and completed a few small Python projects with 6-12 months of experience coding should be fairly well prepared for this learning saga.
+
+`))
+      }
+    })))
+  }
+}).appendTo(document.body)
 
 /**
 
