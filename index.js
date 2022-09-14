@@ -142,8 +142,9 @@ The first lesson of cybersecurity comes to us courtesy of the U.S. Army; a trick
 In this saga, I've *already* introduced the most important skills of the professional world, and the rest of it will be spent identifying, exploring, learning to communicate, and delivering value in one of the most valuable roles in the cybersecurity field... and we'll do it all with Chess. And that concludes my BLUF!
 
 ## Chapter 2 | Engineering *Outcome*, *Outcome*, *Outcome*
+*Understand your true objective.*
 
-The reason we first pause the engineering aspect of this "Security Engineering" Saga to highlight these "soft-skill" aspects of the profession is simple: All the technical expertise and skill in the world will lead you nowhere if you don't first understand what you're really supposed to be *doing* with it. ***Outcome.*** If your only focus in your job is cybersecurity, *you will fail at cybersecurity.* From now on, you are a **multi-discipline** professional. Your new discipline? Enabling operational outcome. That's your job. Before analyzing network protocols, forensic endpoint analysis, reverse engineering, DevSecOps, you need to understand that the very core of your purpose (from the perspective of your employer) is either:
+The reason we first pause the engineering aspect of this "Security Engineering" Saga to highlight these "soft-skill" aspects of the profession is simple: All the technical expertise and skill in the world will lead you nowhere if you don't first understand what you're really supposed to be *doing* with it. ***Outcome.*** If your only focus in your job is cybersecurity, *you will fail at cybersecurity.* From now on, you are a **multi-discipline** professional. Your new discipline? Enabling operational outcome. That's your job. Before analyzing network protocols, forensic endpoint analysis, reverse engineering, DevSecOps, and whatever other technical skillsets you might be developing, you need to understand that the very core of your purpose (from the perspective of your employer) is either:
 
 - Meet some perceived regulatory compliance requirements (security theater),
 - (or) Enable the business to continue to operate its organizational objectives in order of priority under limited resource constraints.
@@ -151,7 +152,7 @@ The reason we first pause the engineering aspect of this "Security Engineering" 
 Cybersecurity is simply the medium through which you're expected to fulfill that purpose. Once you understand this, the next thing you must realize is that you need two critical tools in your belt in addition to technical expertise:
 
 - The ability to understand your organization's big picture objectives and prioritization of those objectives.
-- The ability to effectively communicate the best strategy to meet the organization's risk appetite, the resources required to realistically achieve that mitigation strategy.
+- The ability to effectively communicate the best strategy to meet the organization's risk appetite and the authority/resources required to realistically achieve the controls, capabilities, and processes necessary to execute that mitigation strategy.
 
 If you approach cyber security without those tools, you will instead:
 
@@ -171,7 +172,7 @@ The content of this piece (and I suspect all communication for the rest of my li
 
 > If you're sorta thinking, 'huh? You mean like, blind and deaf people Accessibility?' then you're not alone, because I've come to understand that there are lots and LOTS of people just like you: people for whom this idea does not have the right Accessibility, so it hasn't been able to get through to you yet. It's not your fault for not understanding, any more than it would be your fault for being blind or deaf or motion-restricted or living with any other disability. When software -- or idea-ware for that matter -- fails to be accessible to anyone for any reason, it is the fault of the software or of the messaging of the idea. It is an Accessibility failure. [...] But I'll argue that Accessibility is actually more important than Security because dialing Accessibility to zero means you have no product at all, whereas dialing Security to zero can still get you a reasonably successful product such as the Playstation Network." - [Steve Yegge](https://www.linkedin.com/in/steveyegge/), Senior Software Engineer & Manager, [Stevey's Google Platforms Rant](https://gist.github.com/chitchcock/1281611)
 
-For those who need it, we begin this saga with a substantial overview priceless mile-high lessons on how to approach security engineering (and more broadly, cybersecurity as a profession). If you prefer, feel free to skip straight ahead to the experiments and hand-on coding sections, depending on your interests:
+For those who need it, we begin this saga with a substantial overview of some priceless big-picture lessons on how to approach security engineering (and more broadly, cybersecurity as a profession). If you prefer, feel free to skip straight ahead to the experiments and hand-on coding sections, depending on your interests:
 
 - **Chapter 8 | Let's Exploit Chess (Basic JavaScript Analysis):** Discovering vulnerability in a simple web-app designed without security in mind (a common scenario).
 - **Chapter 9 | Memory Forensics:** Forensic analysis (first manual, then automated) of a vulnerable peer-to-peer web app (Chess).
@@ -236,6 +237,8 @@ The only question is: Will you be leading the way to build that new era of value
 
 Before we move on, let's cover a few of the major ways automation can produce value for an organization, especially when it comes to cybersecurity where "the work is really intense" and the labor cost is extremely high.
 
+To be clear, you don't *need* to code to be a Security Engineer. But you do need to code to be a *good one*.
+
 #### Integration
 
 Once you develop this skill (in addition to whatever your existing skill-set is), you will be a multi-discipline professional. This gives you a unique power to see value opportunities through integration of the tools, workflows, and systems of your department with those of another. Coding lets you speak the language of tools, and once you speak that language, infinite possibilities arise to integrate them with other tools in highly valuable ways.
@@ -259,9 +262,9 @@ And if you're smart, you'll end up being compensated very well for that skillset
 
 This is a short chapter, but it just might be the most important one.
 
-When that time comes, do you think you're going to look around and just find a perfect team to work around *your vision*? People with similar goals are rare. Great teams aren't built in a few days. You must spend years meeting and cultivating a network of people around you. Mentors, peers, friends, colleagues, whatever they are to you, your ability to push limits and do great things will depend on sothers having your back when you've reached the limits of your reach, knowledge, resources, or talent.
+When that time comes, do you think you're going to look around and just find a perfect team to work around *your vision*? People with similar goals are rare. Great teams aren't built in a few days. You must spend years meeting and cultivating a network of people around you. Mentors, peers, friends, colleagues, whatever they are to you, your ability to push limits and do great things will depend on others having your back when you've met the limits of your reach, knowledge, resources, or talent.
 
-If you aren't someone who reaches out to the people around you and lift them up, push them toward their own limits and succeess, you will not be surrounded by people with the reach, knowledge, resource, and talent you need. And if you have ambition, you will need it.
+If you aren't someone who reaches out to the people around you and lifts them up, pushes them toward their own limits and goals, you will not, when the time comes, be surrounded by people who can share with you the reach, knowledge, resource, and talent you need. And if you have ambition, you will need it.
 
 No one succeeds at great things alone. In the small community of cybersecurity, this has never been more true.
 
