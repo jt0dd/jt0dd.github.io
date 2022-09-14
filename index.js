@@ -1,4 +1,7 @@
 const blogBody = new Element('div', {
+  styles: {
+    'max-width': '800px'
+  },
   ready: self => {
     self.append(new Element('div', {
       styles: {
@@ -130,17 +133,17 @@ const blogBody = new Element('div', {
 
 The first lesson of cybersecurity comes to us courtesy of the U.S. Army; a trick I learned in my time enlisted working at the National Security Agency: Begin every professional writing with a BLUF.
 
-**Task One:** In cybersecurity and virtually every other complex profession, your absolute number one task is to identify value.
+- **Task One:** In cybersecurity and virtually every other complex profession, your absolute number one task is to identify value.
 
-**Task Two:** Communicate that value effectively and quickly enough for the people listening to decide to keep listening.
+- **Task Two:** Communicate that value effectively and quickly enough for the people listening to decide to keep listening and perhaps lend you the authority or resources necessary to execute.
 
-In this saga, I've already introduced the most important skill of the professional world, and the rest of it will be spent identifying, exploring, and learning to communicate value in one of the most valuable roles in the cybersecurity field... and we'll do it all with Chess. And there was my BLUF!
+- **Task Three:** Execution... at scale. (...is *the other* half of the battle)
 
-**Task Three:** Execution... at scale. (...is *the other* half of the battle)
+In this saga, I've *already* introduced the most important skills of the professional world, and the rest of it will be spent identifying, exploring, learning to communicate, and delivering value in one of the most valuable roles in the cybersecurity field... and we'll do it all with Chess. And that concludes my BLUF!
 
 ## Chapter 2 | Engineering *Outcome*, *Outcome*, *Outcome*
 
-The reason we first pause the engineering aspect of this "Security Engineering" Saga to highlight these "soft-skill" aspects of the profession is simple: All the technical expertise and skill in the world will lead you nowhere if you don't understand what you're really supposed to be *doing* with it. ***Outcome.*** If your only focus in your job is cybersecurity, *you will fail at cybersecurity.* From now on, you are a **multi-discipline** professional. Your new discipline? Enabling operational outcome. That's your job. Before analyzing network protocols, forensic endpoint analysis, reverse engineering, DevSecOps, you need to understand that the very core of your purpose, from the perspective of your employer is either:
+The reason we first pause the engineering aspect of this "Security Engineering" Saga to highlight these "soft-skill" aspects of the profession is simple: All the technical expertise and skill in the world will lead you nowhere if you don't first understand what you're really supposed to be *doing* with it. ***Outcome.*** If your only focus in your job is cybersecurity, *you will fail at cybersecurity.* From now on, you are a **multi-discipline** professional. Your new discipline? Enabling operational outcome. That's your job. Before analyzing network protocols, forensic endpoint analysis, reverse engineering, DevSecOps, you need to understand that the very core of your purpose, from the perspective of your employer is either:
 
 - Meet some perceived regulatory compliance requirements (security theater),
 - (or) Enable the business to continue to operate its organizational objectives in order of priority under limited resource constraints.
@@ -160,7 +163,7 @@ And then from the misalignment of objectives between yourself and the organizati
 ## Chapter 3 | The Critical Role of Communication in Cybersecurity (And Everything Else)
 *Accessibility: The. Most. Important. Thing.*
 
-The content of this piece (and I suspect all communication for the rest of my lifetime) will be driven by the most valuable piece of operational wisdom I have ever had the pleasure of reading.
+The content of this piece (and I suspect all communication for the rest of my lifetime) will be driven by this valuable piece of operational wisdom I recently had the pleasure of reading.
 
 > "I'm not really sure how Bezos came to this realization -- the insight that he can't build one product and have it be right for everyone. But it doesn't matter, because he gets it. There's actually a formal name for this phenomenon. It's called Accessibility, and it's the most important thing in the computing world.
 
