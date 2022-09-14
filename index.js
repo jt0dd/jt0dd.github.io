@@ -173,10 +173,10 @@ The content of this piece (and I suspect all communication for the rest of my li
 
 For those who need it, we begin this saga with a substantial overview priceless mile-high lessons on how to approach security engineering (and more broadly, cybersecurity as a profession). If you prefer, feel free to skip straight ahead to the experiments and hand-on coding sections, depending on your interests:
 
-- **Chapter 7 | Let's Exploit Chess (Basic JavaScript Analysis):** Discovering vulnerability in a simple web-app designed without security in mind (a common scenario).
-- **Chapter 8 | Memory Forensics:** Forensic analysis (first manual, then automated) of a vulnerable peer-to-peer web app (Chess).
-- **Chapter 9 | Remote Code Execution:** Engineering an attack to exploit vulnerable code and achieve Remote Code Execution (RCE).
-- **Chapter 10 | Detection:** Building a memory forensics baseline of the JavaScript run-time environment within Google Chrome.
+- **Chapter 8 | Let's Exploit Chess (Basic JavaScript Analysis):** Discovering vulnerability in a simple web-app designed without security in mind (a common scenario).
+- **Chapter 9 | Memory Forensics:** Forensic analysis (first manual, then automated) of a vulnerable peer-to-peer web app (Chess).
+- **Chapter 10 | Remote Code Execution:** Engineering an attack to exploit vulnerable code and achieve Remote Code Execution (RCE).
+- **Chapter 11 | Detection:** Building a memory forensics baseline of the JavaScript run-time environment within Google Chrome.
 
 What I just did was take the lesson about operational accessibility and apply it, as I propose we all should, to communication (and everything else we do that involves other people). Even though a writer must establish a target audience, each member of that audience will still consume the writing from a remarkably different perspective. A different set of experiences, strengths, goals, and objectives. Introducing and facilitating choices enabling consumers of your content to quickly access sections that provide them the greatest value (and skip the rest) is an awesome way to apply that lesson to communication.
 
@@ -254,7 +254,18 @@ Some capabilities, especially working with big data (which many networks are) ar
 
 And if you're smart, you'll end up being compensated very well for that skillset. You might even build your own product, your own company even. *Regardless of your role, however technical or non-technical it might be, if you use a computer through some part of the process (and you probably do), you can become a multi-discipline security professional by just applying code to integrate, reduce error, optimize, and/or scale.*
 
-## Chapter 6 | What This Saga Is Not
+## Chapter 6 | Never Climb a Mountain Alone
+*No matter how talented you are, you will always, always, always reach a place where your own strength, talents, and resolve can not take you further.*
+
+This is a short chapter, but it just might be the most important one.
+
+When that time comes, do you think you're going to look around and just find a perfect team to work around *your vision*? People with similar goals are rare. Great teams aren't built in a few days. You must spend years meeting and cultivating a network of people around you. Mentors, peers, friends, colleagues, whatever they are to you, your ability to push limits and do great things will depend on sothers having your back when you've reached the limits of your reach, knowledge, resources, or talent.
+
+If you aren't someone who reaches out to the people around you and lift them up, push them toward their own limits and succeess, you will not be surrounded by people with the reach, knowledge, resource, and talent you need. And if you have ambition, you will need it.
+
+No one succeeds at great things alone. In the small community of cybersecurity, this has never been more true.
+
+## Chapter 7 | What This Saga Is Not
 *This is not a cybersecurity & software engineering "noob-to-pro" tutorial.*
 
 - Coding (in Python) will be demonstrated and briefly explained, but not elaborated on comprehensively.
@@ -264,7 +275,7 @@ In other words, the reader is expected to know the basics of both subjects. Some
 
 > "Be more concerned with not learning than not knowing. Far too often due to feelings of inadequacy, imposter syndrome, ego and so on, people will refrain from asking questions in meetings and on projects because they will get exposed as not knowing things. I prefer to flip this paradigm on its head and I'm far more concerned with not learning what I don't know, than keeping up the facade that I do know. People are eager to share their experience, insights and expertise, you just have to be willing to ask. The irony of this is, when you shed that defense tactic, you learn a hell of a lot more and are more competent in the long haul as well. If we don't learn, we don't grow, and if we don't grow, we lose." - Chris Hughes, CISO & Co-Founder, Aquia, 2022
 
-## Chapter 7 | Let's Exploit Chess (Basic JavaScript Analysis)
+## Chapter 8 | Let's Exploit Chess (Basic JavaScript Analysis)
 *The JavaScript behind this Chess engine will not be an area of focus beyond very basic reverse engineering. If anyone wants to see the full, completed (and vulnerable!) Chess engine source code, it's on GitHub.*
 
 `))
