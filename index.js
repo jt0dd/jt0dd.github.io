@@ -131,6 +131,8 @@ const blogBody = new Element('div', {
 ## Chapter 1 | Bottom Line Up Front (BLUF)
 *Communication is half of every battle.*
 
+One of the key lessons I've learned along my journey to become a cybersecurity professional is that it's not all about the cyber. Success in any objective is very rarely strictly about the technical skillset. There are usually some auxillary soft-skills which are equally if not more important than the hard-skills. As operators in this field there are some really important non-technical understandings we need (and often neglect) to understand before we write a line of PowerShell or inject a byte of shellcode. So that's how this saga begins - with a little wisdom.
+
 The first lesson of cybersecurity comes to us courtesy of the U.S. Army; a trick I learned in my time enlisted working at the National Security Agency: Begin every professional writing with a BLUF.
 
 - **Task One:** In cybersecurity and virtually every other complex profession, your absolute number one task is to identify value.
