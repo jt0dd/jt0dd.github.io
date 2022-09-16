@@ -131,7 +131,7 @@ const blogBody = new Element('div', {
 ## Chapter 1 | Bottom Line Up Front (BLUF)
 *Communication is half of every battle.*
 
-One of the key lessons I've learned along my journey to become a cybersecurity professional is that it's not all about the cyber. Success in any objective is very rarely strictly about the technical skillset. There are usually some auxillary soft-skills which are equally if not more important than the hard-skills. As operators in this field there are some really important non-technical understandings we need (and often neglect) to understand before we write a line of PowerShell or inject a byte of shellcode. So that's how this saga begins - with a little wisdom.
+One of the key lessons I've learned along my journey to become a cybersecurity professional is that it's not all about the cyber. Success in any objective is very rarely strictly about the technical skillset. There are usually some auxillary soft-skills which are equally if not more important than the hard-skills. As operators in this field there are some really important non-technical understandings we need (and often neglect) to understand before we write even a single line of PowerShell or Bash. So that's how this saga begins - with a little wisdom.
 
 The first lesson of cybersecurity comes to us courtesy of the U.S. Army; a trick I learned in my time enlisted working at the National Security Agency: Begin every professional writing with a BLUF.
 
@@ -141,15 +141,15 @@ The first lesson of cybersecurity comes to us courtesy of the U.S. Army; a trick
 
 - **Task Three:** Execution... at scale. (...is *the other* half of the battle)
 
-In this saga, I've *already* introduced the most important skills of the professional world, and the rest of it will be spent identifying, exploring, learning to communicate, and delivering value in one of the most valuable roles in the cybersecurity field... and we'll do it all with Chess.
+In this saga, I've *already* introduced the most important skills of the professional world, and the rest of it will be spent identifying, exploring, learning to communicate, and *delivering* value in one of the most valuable roles in the cybersecurity field... and we'll do it all with Chess.
 
 Why Chess? Chess is a controlled environment of **information states** which must follow some set of controls enforcing rules to operate. Sound familiar? It's like any system of digital assets. Processes in an OS, endpoints on a network, all of our digital assets exist in this structure.
 
-Cybersecurity is a constant battle in the discrepancies between the controls and the rules, finding (or closing) loopholes which allow the attacker to manipulate & access information and the defender to preserve and shield it. The assets are information, the controls defending them are information, the malware attacking them is information, it's all just information, just bits in memory. By thinking about the problem in this way, we simplify it down to its fundamental roots.
+Cybersecurity is a constant battle in the discrepancies between the controls and the rules, finding (or closing) loopholes which allow the attacker to manipulate & access information and the defender to preserve and shield it. The assets are information, the controls defending them are information, the malware attacking them is informatio. It's *all* just information, just bits in memory. By thinking about the problem in this way, we simplify it down to its fundamental roots.
 
-The simple, structured nature of Chess will allow us to explore in (a user-friendly way) the concept of forensic memory baselining against those same information states. We're going to peer inside the memory of the browser and try to see if we can build a baseline with relatively few false positives, and still detect when the attacker breaks in and modifies the game.
+The simple, structured nature of Chess will allow us to explore in (a user-friendly way) the concept of forensic memory baselining against those same information states. We're going to peer inside the memory of the browser and try to see if we can build a baseline (with a manageable false positive rate) and detect when the attacker breaks in and modifies the game. Believe it or not, this is actually harder than detecting a true beacon injected into the browser, and *we'll be visiting that too*.
 
-Our Chess game will make this easy to follow and fun to learn.
+Our Chess game will make the engineering of this cutting edge capability easy to follow and fun to learn.
 
 And that concludes my BLUF!
 
